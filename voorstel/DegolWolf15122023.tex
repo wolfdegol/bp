@@ -1,0 +1,128 @@
+%==============================================================================
+% Voorbeeld hogent-article: onderzoeksvoorstel bachproef
+%==============================================================================
+
+\documentclass{hogent-article}
+
+\usepackage{lipsum} % Voor vultekst
+
+% Invoegen bibliografiebestand
+\usepackage[backend=biber,style=apa]{biblatex}
+\DeclareLanguageMapping{dutch}{dutch-apa}
+\addbibresource{bibliografie.bib}
+
+% Informatie over de opleiding, het vak en soort opdracht
+\studyprogramme{Professionele bachelor toegepaste informatica}
+\course{Bachelor Proef}
+\assignmenttype{Paper: Onderzoeksvoorstel}
+\academicyear{2023-2024} % TODO: pas het academiejaar aan
+
+% TODO (fase 1): Werktitel
+\title{Automatisch genereren van een Dynamisch aanpasbare 3D ziekenhuiskamer op basis van 360 foto’s }
+
+% TODO (fase 1): Studentnaam en emailadres invullen
+\author{Wolf Degol}
+\email{wolf.degol@student.hogent.be}
+
+% TODO (fase 1): Medestudent
+% Schrijf je het voorstel in samenwerking met een medestudent? Geef dan de naam
+% en emailadres hier. Als je het voorstel alleen schrijft, verwijder dan deze
+% regels of zet ze in commentaar.
+%\author{Yasmine Alaoui}
+%\email{yasmine.alaoui@student.hogent.be}
+
+% TODO (fase 1): Geef hier de link naar jullie Github-repository
+\projectrepo{https://github.com/wolfdegol/bp}
+
+% Binnen welke specialisatierichting uit 3TI situeert dit onderzoek zich?
+% Kies uit deze lijst:
+%
+% - Mobile \& Enterprise development
+% - AI \& Data Engineering
+% - Functional \& Business Analysis
+% - System \& Network Administrator
+% - Mainframe Expert
+% - Als het onderzoek niet past binnen een van deze domeinen specifieer je deze
+%   zelf
+%
+\specialisation{Mobile \& Enterprise development}
+% Geef hier enkele sleutelwoorden die je onderwerp beschrijven
+\keywords{Applicatieontwikkeling; 3D-Asset Generation; Generative AI; 360-video; VR }
+
+\begin{document}
+
+\begin{abstract}
+ Het aanmaken van 3D ziekenhuiskamers voor te gebruiken in trainingen  vergt tijd en expertise over game-engines. Als reactie op dit probleem word hier voorgesteld om te onderzoeken of het proces van 3D ruimtecreatie (deels) kan geautomatiseerd worden gebruikmakend van recente ontwikkelingen in computer vision en generatieve artificiële intelligentie. Verschillende technologieën Dreambooth3D en Neuralift-360 worden genoemd als mogelijke benaderingen voor het automatiseren van 3D-modellering.  Daarnaast spreken we ook over fotogrammetrie, LIDAR en 3D-scanning met gestructureerd licht als mogelijke vertrekpunten voor het creatie proces. Als methodologie word er een grondige requirement-analyse aanbevolen gevolgd door een proof-of-concept.
+\end{abstract}
+
+\tableofcontents
+
+\bigskip
+
+% TODO: Neem je dit jaar ook de bachelorproef op? Haal dan de tekst hieronder
+% uit commentaar en pas het aan.
+
+\paragraph{Opmerking}
+
+% Ik neem dit jaar ook de bachelorproef op. De inhoud van dit onderzoeksvoorstel dient ook als het onderwerpvoor mijn bachelorproef. Mijn promotor is (Mr./Mevr.) X.\ Familienaam.
+
+% Beschrijf de eventuele verschillen en/of verbeteringen in dit document t.o.v.\ jouw onderzoeksvoorstel dat je ingediend hebt voor de bachelorproef.
+
+\section{Inleiding}%
+\label{sec:inleiding}
+
+% TODO: (fase 1) introduceer je gekozen onderwerp, formuleer de onderzoeksvraag en deelvragen. Wat is de doelstelling (is die S.M.A.R.T.?), wat zal het resultaat zijn van het onderzoek (een Proof-of-Concept, een prototype, een advies, ...)? Waarom is het nuttig om dit onderwerp te onderzoeken?
+
+Neufkens 2023 trachtte een dynamische 3D ruimte te creëren voor het ondersteunen van de studenten ergonomie te Hogent. e uiteindelijke proof-of-concept applicatie mist de requirement van het dynamisch kunnen toevoegen en verwijderen van objecten in de ruimte, en dit wegens weinig knowhow over de game engine zelf. Deze tekortkoming zorgt ervoor dat de applicatie niet bruikbaar is in een reële situatie en legt een probleem van gebrek aan expertise bloot. Recente ontwikkelingen in computer visie, object detectie, classificering en generatieve artificiële intelligentie doen dan de vraag rijzen of er geen mogelijkheid is om het maak-proces van zo’n 3D ruimte (gedeeltelijk) te automatiseren en op die manier het probleem van een gebrek aan expertise over  zo’n game engine op te lossen. De vraag die dus wordt gesteld is welke technologieën bruikbaar kunnen zijn voor het automatisch genereren van een 3D omgeving. Meer specifiek wil men onderzoeken in hoeverre we de reeële ruimte van een ziekenhuiskamer gebruiken bij het genereren van de omgeving? Hoeveel moet er worden gegenereerd, en hoeveel wordt er uit de reëel omgeving gehaald. Daaruit volgt ook de vraag op welke manier 3D assets zullen worden gegenereerd, welk algoritme er zal worden gebruikt. Ook volgt ook de vraag welke technologie zal gebruikt worden bij het scannen van de ziekenhuisomgeving, er zijn namelijk verschillende technologieën mogelijk. Al deze vragen worden gesteld in context van de creatie van een proof of concept applicatie voor de onderzoeksgroep van de opleiding ergotherapie. 
+
+
+\section{Literatuurstudie}%
+\label{sec:literatuurstudie}
+
+% TODO: (fase 4) schrijf de literatuurstudie uit en gebruik waar gepast referenties naar de vakliteratuur.
+
+% Refereren naar de literatuur kan met:
+% \autocite{BIBTEXKEY} -> (Auteur, jaartal)
+% \textcite{BIBTEXKEY} -> Auteur (jaartal)
+Er zijn verschillende technologieën beschikbaar als het gaat over het omzetten van een bestaande plaats naar een 3D omgeving. Welke de juiste is hangt af van verschillende factoren o.a. grootte van de ruimte, doelgroep van de virtuele omgeving, budget van de opdrachtgever, functionele requirements van de bijhorende applicatie, … . 
+raj2023 stelt dreambooth3d voor. Een algoritme om met enkele foto’s en een tekst-prompt  een 3D-model te genereren.
+Xu_2023_CVPR stelt dan weer Neuralift – 360 voor.  Een algoritme om een 3D model te genereren vanuit één enkele foto.
+martinez2019creation onderzoekt hoe je een museum kan omzetten in een 3D ruimte met behulp van fotogrammetrie. 
+
+Het vertrekpunt van zo’n applicatie kan een driehonderdzestig-graden-foto zijn. Dat is een sfeervormig beeld dat alle hoeken vanuit een bepaalde positie in beeld neemt. Zo’n foto wordt genomen met een speciale 360-camera zoals bijvoorbeeld een Garmin VIRB 360 of een GoPro camera.
+
+3D composition is het overlayen van 3D objecten in een 360 graden foto.
+
+
+\section{Methodologie}%
+\label{sec:methodologie}
+
+% TODO: (fase 5) beschrijf in detail in welke fasen je onderzoek uiteenvalt, hoe lang elke fase duurt en wat het concrete resultaat van elke fase is. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor experimenten, vragenlijsten, simulaties? Je beschrijft ook al welke tools je denkt hiervoor te gebruiken of te ontwikkelen.
+
+    Ten eerste zal er een requirement analyse moeten gebeuren. Vragen zoals ‘wat word er verwacht van zo’n applicatie in een leeromgeving’, ‘wie zal de ruimtes aanmaken’ en ‘wie zal uiteindelijk de doelgroep zijn van afgewerkte virtuele kamers’, en zo verder zullen moeten worden gesteld. Ook zal een vergelijkende studie nodig zijn tussen verschillende manieren van werken. Verschillende software en/of hardware zijn mogelijk, dus moet er uitgezocht worden welke in deze situatie het meest gepast is. Daarnaast zal een ontwerp van de architectuur van de software nodig zijn. Ten slotte zal de proof-of-concept gemaakt worden.
+
+\section{Verwachte resultaten}%
+\label{sec:verwachte-resultaten}
+
+% TODO: (fase 6) beschrijf wat je verwacht uit je onderzoek en waarom (bv. volgens je literatuuronderzoek is softwarepakket A het meest gebruikte en denk je dat het voor deze casus ook het meest geschikt zal zijn). Natuurlijk kan je niet in de toekomst kijken en mag je geen alternatieve mogelijkheden uitsluiten. In de praktijk gebeurt het ook vaak dat een onderzoek tot verrassende resultaten leidt, dat maakt het proces nog interessanter!
+
+Het is moeilijk een resultaat te voorspellen omdat er veel factoren zijn om rekening mee te houden. Elke methodologie van scannen, maar ook elk algoritme van genereren van 3D assets heeft zijn eigen complexiteit, kosten en baten. 
+
+
+
+
+
+
+%\section{ conclusie}%
+%\label{sec:discussie-conclusie}
+
+    
+%------------------------------------------------------------------------------
+% Referentielijst
+%------------------------------------------------------------------------------
+% TODO: (fase 4) de gerefereerde werken moeten in BibTeX-bestand
+% bibliografie.bib voorkomen. Gebruik JabRef om je bibliografie bij te
+% houden.
+\printbibliography[heading=bibintoc]
+
+\end{document}
