@@ -160,7 +160,6 @@
 
 @Repository{,
   abstract = {An awesome PyTorch NeRF library},
-  author   = {Yoonwoo Jeong, Seungjoo Shin, Kibaek Park.},
   title    = {NeRF-Factory: An awesome PyTorch NeRF collection},
   url      = {https://github.com/kakaobrain/NeRF-Factory},
 }
