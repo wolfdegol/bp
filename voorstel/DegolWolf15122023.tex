@@ -73,7 +73,7 @@
 
 % TODO: (fase 1) introduceer je gekozen onderwerp, formuleer de onderzoeksvraag en deelvragen. Wat is de doelstelling (is die S.M.A.R.T.?), wat zal het resultaat zijn van het onderzoek (een Proof-of-Concept, een prototype, een advies, ...)? Waarom is het nuttig om dit onderwerp te onderzoeken?
 
-Neufkens 2023 trachtte een dynamische 3D ruimte te creëren voor het ondersteunen van de studenten ergonomie te Hogent. e uiteindelijke proof-of-concept applicatie mist de requirement van het dynamisch kunnen toevoegen en verwijderen van objecten in de ruimte, en dit wegens weinig knowhow over de game engine zelf. Deze tekortkoming zorgt ervoor dat de applicatie niet bruikbaar is in een reële situatie en legt een probleem van gebrek aan expertise bloot. Recente ontwikkelingen in computer visie, object detectie, classificering en generatieve artificiële intelligentie doen dan de vraag rijzen of er geen mogelijkheid is om het maak-proces van zo’n 3D ruimte (gedeeltelijk) te automatiseren en op die manier het probleem van een gebrek aan expertise over  zo’n game engine op te lossen. De vraag die dus wordt gesteld is welke technologieën bruikbaar kunnen zijn voor het automatisch genereren van een 3D omgeving. Meer specifiek wil men onderzoeken in hoeverre we de reeële ruimte van een ziekenhuiskamer gebruiken bij het genereren van de omgeving? Hoeveel moet er worden gegenereerd, en hoeveel wordt er uit de reëel omgeving gehaald. Daaruit volgt ook de vraag op welke manier 3D assets zullen worden gegenereerd, welk algoritme er zal worden gebruikt. Ook volgt ook de vraag welke technologie zal gebruikt worden bij het scannen van de ziekenhuisomgeving, er zijn namelijk verschillende technologieën mogelijk. Al deze vragen worden gesteld in context van de creatie van een proof of concept applicatie voor de onderzoeksgroep van de opleiding ergotherapie. 
+Warre Neufkens trachtte in 2023 een dynamische 3D ruimte te creëren voor het ondersteunen van de studenten ergonomie te Hogent. e uiteindelijke proof-of-concept applicatie mist de requirement van het dynamisch kunnen toevoegen en verwijderen van objecten in de ruimte, en dit wegens weinig knowhow over de game engine zelf. Deze tekortkoming zorgt ervoor dat de applicatie niet bruikbaar is in een reële situatie en legt een probleem van gebrek aan expertise bloot. Recente ontwikkelingen in computer visie, object detectie, classificering en generatieve artificiële intelligentie doen dan de vraag rijzen of er geen mogelijkheid is om het maak-proces van zo’n 3D ruimte (gedeeltelijk) te automatiseren en op die manier het probleem van een gebrek aan expertise over  zo’n game engine op te lossen. De vraag die dus wordt gesteld is welke technologieën bruikbaar kunnen zijn voor het automatisch genereren van een 3D omgeving. Meer specifiek wil men onderzoeken in hoeverre we de reeële ruimte van een ziekenhuiskamer gebruiken bij het genereren van de omgeving? Hoeveel moet er worden gegenereerd, en hoeveel wordt er uit de reëel omgeving gehaald. Daaruit volgt ook de vraag op welke manier 3D assets zullen worden gegenereerd, welk algoritme er zal worden gebruikt. Ook volgt ook de vraag welke technologie zal gebruikt worden bij het scannen van de ziekenhuisomgeving, er zijn namelijk verschillende technologieën mogelijk. Al deze vragen worden gesteld in context van de creatie van een proof of concept applicatie voor de onderzoeksgroep van de opleiding ergotherapie.
 
 
 \section{Literatuurstudie}%
@@ -84,11 +84,10 @@ Neufkens 2023 trachtte een dynamische 3D ruimte te creëren voor het ondersteune
 % Refereren naar de literatuur kan met:
 % \autocite{BIBTEXKEY} -> (Auteur, jaartal)
 % \textcite{BIBTEXKEY} -> Auteur (jaartal)
-Er zijn verschillende technologieën beschikbaar als het gaat over het omzetten van een bestaande plaats naar een 3D omgeving. Welke de juiste is hangt af van verschillende factoren o.a. grootte van de ruimte, doelgroep van de virtuele omgeving, budget van de opdrachtgever, functionele requirements van de bijhorende applicatie, … . 
-raj2023 stelt dreambooth3d voor. Een algoritme om met enkele foto’s en een tekst-prompt  een 3D-model te genereren.
-Xu_2023_CVPR stelt dan weer Neuralift – 360 voor.  Een algoritme om een 3D model te genereren vanuit één enkele foto.
-martinez2019creation onderzoekt hoe je een museum kan omzetten in een 3D ruimte met behulp van fotogrammetrie. 
-
+Er zijn verschillende technologieën beschikbaar als het gaat over het omzetten van een bestaande plaats naar een 3D omgeving. Welke de juiste is hangt af van verschillende factoren o.a. grootte van de ruimte, doelgroep van de virtuele omgeving, budget van de opdrachtgever, functionele requirements van de bijhorende applicatie, … .
+\autocite{Raj2023} stelt dreambooth3d voor. Een algoritme om met enkele foto’s en een tekst-prompt  een 3D-model te genereren.
+\autocite{Xu2023} stelt dan weer Neuralift – 360 voor.  Een algoritme om een 3D model te genereren vanuit één enkele foto.
+\autocite{Martinez2019} onderzoekt hoe je een museum kan omzetten in een 3D ruimte met behulp van fotogrammetrie.
 Het vertrekpunt van zo’n applicatie kan een driehonderdzestig-graden-foto zijn. Dat is een sfeervormig beeld dat alle hoeken vanuit een bepaalde positie in beeld neemt. Zo’n foto wordt genomen met een speciale 360-camera zoals bijvoorbeeld een Garmin VIRB 360 of een GoPro camera.
 
 3D composition is het overlayen van 3D objecten in een 360 graden foto.
@@ -106,7 +105,7 @@ Het vertrekpunt van zo’n applicatie kan een driehonderdzestig-graden-foto zijn
 
 % TODO: (fase 6) beschrijf wat je verwacht uit je onderzoek en waarom (bv. volgens je literatuuronderzoek is softwarepakket A het meest gebruikte en denk je dat het voor deze casus ook het meest geschikt zal zijn). Natuurlijk kan je niet in de toekomst kijken en mag je geen alternatieve mogelijkheden uitsluiten. In de praktijk gebeurt het ook vaak dat een onderzoek tot verrassende resultaten leidt, dat maakt het proces nog interessanter!
 
-Het is moeilijk een resultaat te voorspellen omdat er veel factoren zijn om rekening mee te houden. Elke methodologie van scannen, maar ook elk algoritme van genereren van 3D assets heeft zijn eigen complexiteit, kosten en baten. 
+Het is moeilijk een resultaat te voorspellen omdat er veel factoren zijn om rekening mee te houden. Elke methodologie van scannen, maar ook elk algoritme van genereren van 3D assets heeft zijn eigen complexiteit, kosten en baten.
 
 
 
@@ -116,7 +115,7 @@ Het is moeilijk een resultaat te voorspellen omdat er veel factoren zijn om reke
 %\section{ conclusie}%
 %\label{sec:discussie-conclusie}
 
-    
+
 %------------------------------------------------------------------------------
 % Referentielijst
 %------------------------------------------------------------------------------
