@@ -1,0 +1,231 @@
+%==============================================================================
+% Voorbeeld hogent-article: onderzoeksvoorstel bachproef
+%==============================================================================
+
+\documentclass{hogent-article}
+
+\usepackage{lipsum} % Voor vultekst
+
+% Invoegen bibliografiebestand
+\usepackage[backend=biber,style=apa]{biblatex}
+\DeclareLanguageMapping{dutch}{dutch-apa}
+\addbibresource{bibliografie.bib}
+
+% Informatie over de opleiding, het vak en soort opdracht
+\studyprogramme{Professionele bachelor toegepaste informatica}
+\course{Bachelor Proef}
+\assignmenttype{Paper: Onderzoeksvoorstel}
+\academicyear{2023-2024} % TODO: pas het academiejaar aan
+
+% TODO (fase 1): Werktitel
+\title{Het automatisch genereren  van een dynamische 3D ruimte met oog op een didactische meerwaarde voor de opleiding ergotherapie }
+
+% TODO (fase 1): Studentnaam en emailadres invullen
+\author{Wolf Degol}
+\email{wolf.degol@student.hogent.be}
+
+% TODO (fase 1): Medestudent
+% Schrijf je het voorstel in samenwerking met een medestudent? Geef dan de naam
+% en emailadres hier. Als je het voorstel alleen schrijft, verwijder dan deze
+% regels of zet ze in commentaar.
+%\author{Yasmine Alaoui}
+%\email{yasmine.alaoui@student.hogent.be}
+
+% TODO (fase 1): Geef hier de link naar jullie Github-repository
+\projectrepo{https://github.com/wolfdegol/bp}
+
+% Binnen welke specialisatierichting uit 3TI situeert dit onderzoek zich?
+% Kies uit deze lijst:
+%
+% - Mobile \& Enterprise development
+% - AI \& Data Engineering
+% - Functional \& Business Analysis
+% - System \& Network Administrator
+% - Mainframe Expert
+% - Als het onderzoek niet past binnen een van deze domeinen specifieer je deze
+%   zelf
+%
+\specialisation{Mobile \& Enterprise development}
+% Geef hier enkele sleutelwoorden die je onderwerp beschrijven
+\keywords{Applicatieontwikkeling; 3D-Asset Generation; Generative AI; 360-video; VR; NeRF }
+
+\begin{document}
+
+\begin{abstract}
+Het aanmaken van 3D ruimtes vergt tijd en expertise over game-engines zoals Unity of Unreal Engine en 3D-editors zoals Maya of Blender. Als reactie op dit probleem wordt hier voorgesteld om te onderzoeken of het proces van 3D-ruimtecreatie (deels) kan geautomatiseerd worden en uitgevoerd door lector of studenten ergotherapie. Er is namelijk nood aan een gebruiksvriendelijke 3D editor om in de les te gebruiken en combineren met een VR-bril zoals de Meta Quest 2. 
+Recente ontwikkelingen in computer visie en generatieve artificiële intelligentie bieden veel nieuwe mogelijkheden tot creatie van beeld materiaal in zo wel 2 als 3 dimensies. In dit onderzoek tracht er achterhaald te worden welke algoritmes en tools het meest efficiënt zijn in dit geval. 
+
+\end{abstract}
+
+\tableofcontents
+
+\bigskip
+
+% TODO: Neem je dit jaar ook de bachelorproef op? Haal dan de tekst hieronder
+% uit commentaar en pas het aan.
+
+\paragraph{Opmerking}
+
+% Ik neem dit jaar ook de bachelorproef op. De inhoud van dit onderzoeksvoorstel dient ook als het onderwerpvoor mijn bachelorproef. Mijn promotor is (Mr./Mevr.) X.\ Familienaam.
+
+% Beschrijf de eventuele verschillen en/of verbeteringen in dit document t.o.v.\ jouw onderzoeksvoorstel dat je ingediend hebt voor de bachelorproef.
+
+\section{Inleiding}%
+\label{sec:inleiding}
+
+% TODO: (fase 1) introduceer je gekozen onderwerp, formuleer de onderzoeksvraag en deelvragen. Wat is de doelstelling (is die S.M.A.R.T.?), wat zal het resultaat zijn van het onderzoek (een Proof-of-Concept, een prototype, een advies, ...)? Waarom is het nuttig om dit onderwerp te onderzoeken?
+
+Warre Neufkens trachtte in 2023 een dynamische 3D ziekenhuiskamer te creëren voor het ondersteunen van de studenten ergonomie te Hogent in zijn bachelor proef voor de opleiding toegepaste informatica. Concreet maakte hij een virtuele ziekenhuiskamer met een bed en kasten. Je kon per object een tekst laten verschijnen met een¬ uitleg over het aangeklikte object. De applicatie slaat de bal mis bij de requirement van het dynamisch kunnen toevoegen en verwijderen van objecten in de ruimte. Dit wijt hij aan het hebben van weinig knowhow over de game engine zelf. Deze tekortkoming zorgt ervoor dat de applicatie aan zich niet bruikbaar is in een reële situatie. Het veranderen van de positie, kleur en vorm van meubels, ramen, deuren, … is onder andere waar de doelgroep naar op zoek is. 
+
+Recente ontwikkelingen in computer visie, object-detectie, object-classificering en generatieve kunstmatige  intelligentie doen dan de vraag rijzen of het misschien mogelijk is om dat maak-proces van zo’n 3D ruimte (gedeeltelijk) te kunnen automatiseren. Zo’n applicatie zou het doelpubliek van Warre Neufkens zijn originele POC in staat stellen om zelf een 3D omgeving aan te maken. Beter nog zou er dan geen voorkennis van programmeren en/of het gebruik van 3D ontwikkelingssoftware vereist zijn. Dit brengt met zich mee dat het een pak goedkoper is om zo’n ruimte op te stellen. Het creëer proces kan op die manier ook als een didactisch proces worden gezien. 
+
+Welke technologieën zijn het meest geschikt voor het automatisch genereren van een 3D omgeving in functie van een gebruiksvriendelijke applicatie voor de lector/student ergotherapie?
+Meer specifiek moet er onderzocht worden in hoeverre we de reële ruimte van een ziekenhuiskamer gebruiken bij het genereren van de 3D omgeving. Op welke manier zullen 3D assets worden gegenereerd? Welk algoritme is het meest geschikt om 3D assets te genereren op basis van de reële omgeving? Welke hardware is het meest geschikt om de ruimte te scannen? 
+
+Ten slotte is de gebruiksvriendelijkheid ook van groot belang. Het doel van dit onderzoek is het bekomen van een gebruiksvriendelijke applicatie om in te zetten voor de opleiding ergotherapie. 
+Wat is het juist dat een lector van de applicatie verlangt? Waar zouden de studenten de applicatie voor willen gebruiken? Hoeveel zal de gebruiker willen aanpassen aan deze gegenereerde ruimte? Wat is de minimale kwaliteit van de gewenste 3D ruimte?  Er zal een requirement analyse moeten gebeuren om te antwoorden op deze vragen.
+
+
+
+\section{Literatuurstudie}%
+\label{sec:literatuurstudie}
+
+% TODO: (fase 4) schrijf de literatuurstudie uit en gebruik waar gepast referenties naar de vakliteratuur.
+
+% Refereren naar de literatuur kan met:
+% \autocite{BIBTEXKEY} -> (Auteur, jaartal)
+% \textcite{BIBTEXKEY} -> Auteur (jaartal)
+
+\subsection{Manieren om 3D-Omgevingen te bekijken}
+\subsubsection{Stereoscopische foto’s/video’s }
+
+Stereoscopie betekend het bekijken van 2 beelden. Doormiddel van twee beelden te laten zien, denken onze hersenen dat een beeld in 3 dimensies bekijken. De camera die op de HOGENT beschikbaar is, is de Ricoh Theta Z1. Die camera maakt doormiddel van twee lenzen een beeld van een ruimte in alle richtingen. Softwarematig wordt dit beeld dan samengevoegd tot een bolvormige foto. Als kijker word je dan als het ware in het middelpunt van de bol gezet en kan je vervolgens rondkijken in de foto alsof het een echte 3-dimensionale foto was. 
+
+\subsubsection{Virtuele 3D omgeving}
+
+Een virtuele 3D omgeving is een ruimte gecreëerd door middel van software. Structuren en objecten hebben een volume, een textuur en belichting waardoor er een idee van ruimte ontstaat. Toepassingen zijn te vinden in entertainment zoals films en games, maar ook simulaties en in dit geval didactisch. Het grote verschil met stereoscopische foto’s en video’s is dat in een 3D omgeving objecten uit verschillende hoeken kunnen worden bekeken en er eventueel zelfs invloed kan worden uitgeoefend op de omgeving. Software als Maya of Blender worden gebruikt om 3D objecten te maken, terwijl game engines als Unity of Unreal Engine gebuikt worden om de interactiviteit te verzorgen. 
+
+\subsection{Manieren om 3D-Objecten virtueel weer te geven}
+
+Er zijn verschillende manieren om zo’n virtuele omgeving weer te geven, en elke manier heeft zo zijn eigen toepassingen. 
+
+\subsubsection{Mesh}
+
+Mesh bestaat uit twee onderdelen: een vorm bepaald door de hoekpunten  en geconnecteerde meshes bepaald door de randen of vlakken die de hoekpunten verbinden. Mesh bestaan meestal enkel uit driehoeken. \autocite{Luebke2002} 
+
+\subsubsection{Impliciete functies}
+
+Vormen in 3 dimensies kunnen weergegeven worden als wiskundige functies. Het is zelfs mogelijk complexere vormen te maken door het combineren van verschillende functies. Een nadeel is hier dat wij als mens slechts beperkt zijn in het combineren van genoeg functies om een juiste interpretatie trachten te maken van bijvoorbeeld een doornstruik.  Hiervoor zijn nieuwe methodes nodig zoals bv.  machine learning  of gaussian splatting zoals we hieronder bespreken. \autocite{Tancik2023}
+
+\subsubsection{Point Cloud}
+
+Een point cloud is in feite een groep van samenhangende punten. Ze stellen een reeks punten in de ruimte voor waar er een deel van een object te vinden is. Deze manier van voorstelling wordt vaak gebruikt bij laser scanners of NeRF modellen. De granulariteit en kleur voorstelling van de punten kunnen worden aangepast aan de noden van de toepassing. 
+Point cloud data kan omgezet worden in een mesh door middel van algoritmes als Ball Pivoting Algorithm of Marching Cubes. \autocite{Fisher2014}
+
+\subsection{Manieren om om te zetten naar 3D}
+
+\subsubsection{Fotogrammetrie}
+
+Het nemen van een foto is eigenlijk een projectie van een 3D-scène maken op een 2D-vlak, waarbij er informatie over de diepte verloren gaat. Het doel van fotogrammetrie is eigenlijk het tegenovergestelde: men wil aan de hand van overlappende foto’s een zo gedetailleerd mogelijke 3D omgeving genereren. \autocite{FormLabs}
+Men gaat een techniek toepassen genaamd Feature Extraction waarbij gemeenschappelijke kenmerken in foto’s efficiënt worden opgeslagen en vergeleken met andere foto’s. Op die manier kan men de positie van de camera-poses van de originele foto’s berekenen. Door die poses en de gemeenschappelijke kenmerken te vergelijken, kan men een 3D schatting maken van de positie van deze kenmerken, dat heet Structure from motion (SfM) \autocite{Schonberger2016}. Daarna zal er een mesh worden gegenereerd op basis van deze structuur en wordt per camera vergeleken welke kleur overeenkomt met een kenmerk, om zo een texture te bekomen. Die zal dan door middel van een UV map op de 3D structuur worden geplakt. Een veelgenoemd software pakket voor SfM te berekenen is COLMAP. Voor fotogrammetrie heb je dan weer 3DF Zephyr of AliceVision. 
+
+\subsubsection{NeRF}
+
+NeRF of Neural Radiance Fields is een vernieuwende manier om overlappende foto’s om te zetten in een point cloud. Anders dan bij fotogrammetrie wordt er bij deze techniek gebruik gemaakt van een neuraal netwerk.
+Een neuraal netwerk is onderdeel van machine learning, een tak van de computerwetenschappen en meer bepaald artificiële intelligentie waarbij statistische algoritmes trachten (zelfstandig)  te leren en generaliseren van bepaalde data. Neurale netwerken worden gebruikt om modellen te bouwen die op hun beurt proberen data te voorspellen op basis van input. 
+Het neural network in het geval van NeRF krijgt foto’s toegestopt die hij op zijn beurt zal analyseren. In het kort worden per foto willekeurige ‘lichtstralen’ uitgestuurd. Waar die dan snijden met een bepaald kenmerk, daar krijg je dan een punt. Als je dit blijft herhalen voor meerdere foto’s voor een bepaalde periode, dan krijg je een verzameling van allemaal punten, of een point cloud. 
+Door alle foto’s te laten analyseren door het neuraal netwerk krijg je dan een model, dat heet dan een Neural Radiance Field, of NeRF. Informatie over diepte en kleur zit dan vervat in dat model en dan kan je aan de hand van een punt in de ruimte (x,y,z) en de kijkrichting ( θ, Φ) vragen om een output. Dan krijg je dus de dichtheid van het volume en de kijkrichting-afhankelijke straling of ‘radiance’ die de kleur bepaald. Het model zal dus  op elke plaats in de ruimte en elke kijkhoek proberen ‘voorspellen’ hoe het er uit zou moeten zien aan de hand van de foto’s waarmee hij getraind is. \autocite{Mildenhall2020}
+
+Sinds de paper van NeRF uitkwam is er een hele reeks aan vervolg papers gekomen die het proces trachten te optimaliseren. Hoewel NeRF erg traag is in computatie, zijn er methodes ontwikkeld voor het optimaliseren van bijna elk stuk in de pijplijn. Hieronder zijn er een paar opgesomd.
+
+Nerf Studio is een API  geschreven door de originele bedenkers van NeRF. Je kan er op een makkelijke manier NeRFs creëren, trainen en testen. \autocite{Tancik2023a}
+
+InpaintNeRF360 is een framework dat taal gebruikt om een Neural Radiance Field te bewerken. Dit gebeurd door middel van de training foto’s te bewerken met een generatief model dat gegeven foto’s kan bewerken door middel van een prompt. \autocite{Wang2023a}
+
+
+Nvidia Instant Nerf is een framework gebouwd door onderzoek ondersteund door Nvidia. Je kan er op enkele minuten tijd een NeRF model mee trainen. In een 10-tal ms kan je neurale graphics renderen. Het model zelf trainen duurt volgens hen slechts 5 minuten. 
+\autocite{Mueller2022}
+
+NeRF Shop is een tool om een point cloud model mee te bewerken. Door het aanduiden van een deel van het model door middel van wat krabbels, kan de software volume detecteren. Na vervolgens het kiezen hoeveel je van het volume wil selecteren, kan je beginnen aanpassen. 
+Je kan objecten verplaatsen, verbuigen of verwijderen.\autocite{NeRFshop23}
+
+\subsubsection{Gaussian Splatting}
+
+Geïnspireerd door NeRF gaat Gaussian splatting ook Radiance Fields bij houden. Gaussian splatting zal deze keer zonder een neuraal netwerk tewerk gaan. Graphics worden benaderd doormiddel van 3D gaussians, een reeks 3D gauss curves waarvan vorm en doorzichtigheid wordt gebruikt om het originele beeld te benaderen. Die nieuwe beelden worden dan afgetoetst met de originele beelden, om zo tot een accuraat model te komen.
+GS biedt een enorme vooruitgang in kwaliteit en snelheid waaraan beelden kunnen worden geladen. Er is sprake van een real-time rendering. \autocite{kerbl3Dgaussians}
+
+\subsubsection{Lidar}
+
+LIDAR of Laser Imaging Detection And Ranging is een techniek die, zoals het zelf zegt, de afstand tot een object bepaald tot een object. Het kan heel precies de vorm van een omgeving scannen en wordt gebruikt in velden als agricultuur, archeologie en zelfrijdende auto’s. Je hebt er gespecialiseerde sensors voor nodig om zo’n metingen te kunnen uitvoeren.
+
+\subsubsection{Object herkenning en classificering}
+
+Het doel van object herkenning is het herkennen van bepaalde kenmerken en die linken aan een bepaald woord, of classificering. Hierboven werd kort gesproken over Feature Extraction. Net zoals daar wordt gebruik gemaakt van een algoritme zoals bijvoorbeeld SIFT van \textcite{Schonberger2016} om het in kaart te brengen van prominente kenmerken waarmee we aan de slag kunnen. 
+Een andere manier van werken zou kunnen zijn om de omgeving te scannen op objecten door middel van object herkenning en classificering. Op basis van die data zou je voorgeprogrammeerde objecten kunnen samenvoegen in een ruimte. 
+Enkele voorbeelden van platforms waar je modellen zou kunnen trainen zijn Tensorflow, Pytorch, Azure Vision Studio of customvision.ai. 
+
+\subsubsection{Oriëntatie van objecten}
+
+Het bepalen van de oriëntatie van een gedetecteerd object is nodig wanneer je de ruimte wil nabootsen. Een bed staat meestal evenwijdig met de muur bijvoorbeeld. \textcite{Saxena2009} stelt een manier voor bijvoorbeeld om de oriëntatie van een object te proberen achterhalen.
+
+\subsubsection{Asset generatie}
+
+Door middel van object detectie kunnen we ofwel een voorgemaakt model tonen op basis van de semantiek van het gedetecteerd object. Een andere mogelijkheid is om het gevonden object in een generatief model in te geven. Er zijn een aantal projecten lopende die prompts omzetten in 3D modellen: 
+\textcite{Raj2023} stelt dreambooth3d voor. Een algoritme om met enkele foto’s en een tekst-prompt  een 3D-model te genereren.
+\textcite{Xu2023} stelt dan weer Neuralift – 360 voor.  Een algoritme om een 3D model te genereren vanuit één enkele foto.
+
+
+\section{Methodologie}%
+\label{sec:methodologie}
+
+% TODO: (fase 5) beschrijf in detail in welke fasen je onderzoek uiteenvalt, hoe lang elke fase duurt en wat het concrete resultaat van elke fase is. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor experimenten, vragenlijsten, simulaties? Je beschrijft ook al welke tools je denkt hiervoor te gebruiken of te ontwikkelen.
+
+\subsection{Requirement Analyse}
+
+
+
+\subsubsection{Functionele requirements}
+
+Meta Quest 2 draait op Android Open Source Project (AOSP)
+Er zal ook duidelijk moeten worden welk algoritme en frameworks er zullen worden gebruikt, welke specificaties de pc’s hebben om de modellen te trainen, … .
+
+\subsubsection{Niet-Functionele requirements}
+
+Daarnaast moet het ook duidelijk worden wat de lector specifiek verwacht van de applicatie. Tot nu toe weten we dat er een 3D ruimte nodig is met aanpasbare kenmerken. Ook weten we dat de oplossing die we trachten te maken gratis moet zijn aangezien er geen extra budget is. 
+
+\subsubsection{MOSCOW-analyse}
+
+Uit deze requirements maken we onderscheid tussen must-haves, should-haves, could-haves en nice-to-haves. Uiteindelijk willen we een werkende proof-of-concept die op tijd klaar is. Dan is een volgorde zeker aangewezen.
+
+\subsection{Long List}
+
+De lijst van alle verschillende mogelijkheden van frameworks, tools en algoritmes. Die wordt dan in een tabel geschreven naast alle requirements met alle must-haves & zoveel mogelijk nice-to-haves.
+
+\subsection{Short List en Proof-Of-Concept}
+
+De proof of concept zal dienen als uiteindelijke test voor de frameworks tools & algoritmes die de short list hebben gehaald. 
+
+\section{Verwachte resultaten}%
+\label{sec:verwachte-resultaten}
+
+% TODO: (fase 6) beschrijf wat je verwacht uit je onderzoek en waarom (bv. volgens je literatuuronderzoek is softwarepakket A het meest gebruikte en denk je dat het voor deze casus ook het meest geschikt zal zijn). Natuurlijk kan je niet in de toekomst kijken en mag je geen alternatieve mogelijkheden uitsluiten. In de praktijk gebeurt het ook vaak dat een onderzoek tot verrassende resultaten leidt, dat maakt het proces nog interessanter!
+
+Er zijn heel wat mogelijkheden om een 3D ruimte automatisch te laten genereren. Sommige zijn niet gratis en sommige zijn enkel nog maar in papers gebruikt. Het resultaat zal afhangen van de requirements die uiteindelijk uit de bus komen. De mogelijkheden voor de ontwikkeling zijn talrijk, dus ik heb er vertrouwen in dat een proof-of-concept die min of meer werkt wel moet lukken.  
+
+
+
+
+
+%\section{ conclusie}%
+%\label{sec:discussie-conclusie}
+
+
+%------------------------------------------------------------------------------
+% Referentielijst
+%------------------------------------------------------------------------------
+% TODO: (fase 4) de gerefereerde werken moeten in BibTeX-bestand
+% bibliografie.bib voorkomen. Gebruik JabRef om je bibliografie bij te
+% houden.
+\printbibliography[heading=bibintoc]
+
+\end{document}
