@@ -31,8 +31,7 @@
 %\author{Yasmine Alaoui}
 %\email{yasmine.alaoui@student.hogent.be}
 
-% TODO (fase 1): Geef hier de link naar jullie Github-repository
-\projectrepo{https://github.com/wolfdegol/bp}
+\supervisor[Co-promotor]{Jana Van Damme (HOGENT, \href{mailto:jana.vandamme@hogent.be}{jana.vandamme@hogent.be})}
 
 % Binnen welke specialisatierichting uit 3TI situeert dit onderzoek zich?
 % Kies uit deze lijst:
@@ -75,15 +74,15 @@ Recente ontwikkelingen in computer visie en generatieve artificiële intelligent
 
 % TODO: (fase 1) introduceer je gekozen onderwerp, formuleer de onderzoeksvraag en deelvragen. Wat is de doelstelling (is die S.M.A.R.T.?), wat zal het resultaat zijn van het onderzoek (een Proof-of-Concept, een prototype, een advies, ...)? Waarom is het nuttig om dit onderwerp te onderzoeken?
 
-Warre Neufkens trachtte in 2023 een dynamische 3D ziekenhuiskamer te creëren voor het ondersteunen van de studenten ergonomie te Hogent in zijn bachelor proef voor de opleiding toegepaste informatica. Concreet maakte hij een virtuele ziekenhuiskamer met een bed en kasten. Je kon per object een tekst laten verschijnen met een¬ uitleg over het aangeklikte object. De applicatie slaat de bal mis bij de requirement van het dynamisch kunnen toevoegen en verwijderen van objecten in de ruimte. Dit wijt hij aan het hebben van weinig knowhow over de game engine zelf. Deze tekortkoming zorgt ervoor dat de applicatie aan zich niet bruikbaar is in een reële situatie. Het veranderen van de positie, kleur en vorm van meubels, ramen, deuren, … is onder andere waar de doelgroep naar op zoek is. 
+Warre Neufkens trachtte in 2023 een dynamische 3D ziekenhuiskamer te creëren voor het ondersteunen van de studenten ergonomie te Hogent in zijn bachelor proef voor de opleiding toegepaste informatica. Concreet maakte hij een virtuele ziekenhuiskamer met een bed en kasten. Je kon per object een tekst laten verschijnen met een uitleg over het aangeklikte object.
+ 
+De applicatie slaat de bal mis bij de requirement van het dynamisch kunnen toevoegen en verwijderen van objecten in de ruimte. Dit wijt hij aan het hebben van weinig knowhow over de game engine zelf. Deze tekortkoming zorgt ervoor dat de applicatie aan zich niet bruikbaar is in een reële situatie. Het veranderen van de positie, kleur en vorm van meubels, ramen, deuren, … is onder andere waar de doelgroep naar op zoek is. 
 
 Recente ontwikkelingen in computer visie, object-detectie, object-classificering en generatieve kunstmatige  intelligentie doen dan de vraag rijzen of het misschien mogelijk is om dat maak-proces van zo’n 3D ruimte (gedeeltelijk) te kunnen automatiseren. Zo’n applicatie zou het doelpubliek van Warre Neufkens zijn originele POC in staat stellen om zelf een 3D omgeving aan te maken. Beter nog zou er dan geen voorkennis van programmeren en/of het gebruik van 3D ontwikkelingssoftware vereist zijn. Dit brengt met zich mee dat het een pak goedkoper is om zo’n ruimte op te stellen. Het creëer proces kan op die manier ook als een didactisch proces worden gezien. 
 
-Welke technologieën zijn het meest geschikt voor het automatisch genereren van een 3D omgeving in functie van een gebruiksvriendelijke applicatie voor de lector/student ergotherapie?
-Meer specifiek moet er onderzocht worden in hoeverre we de reële ruimte van een ziekenhuiskamer gebruiken bij het genereren van de 3D omgeving. Op welke manier zullen 3D assets worden gegenereerd? Welk algoritme is het meest geschikt om 3D assets te genereren op basis van de reële omgeving? Welke hardware is het meest geschikt om de ruimte te scannen? 
+Welke technologieën zijn het meest geschikt voor het automatisch genereren van een 3D omgeving in functie van een gebruiksvriendelijke applicatie voor de lector/student ergotherapie?Meer specifiek moet er onderzocht worden in hoeverre we de reële ruimte van een ziekenhuiskamer gebruiken bij het genereren van de 3D omgeving. Op welke manier zullen 3D assets worden gegenereerd? Welk algoritme is het meest geschikt om 3D assets te genereren op basis van de reële omgeving? Welke hardware is het meest geschikt om de ruimte te scannen? 
 
-Ten slotte is de gebruiksvriendelijkheid ook van groot belang. Het doel van dit onderzoek is het bekomen van een gebruiksvriendelijke applicatie om in te zetten voor de opleiding ergotherapie. 
-Wat is het juist dat een lector van de applicatie verlangt? Waar zouden de studenten de applicatie voor willen gebruiken? Hoeveel zal de gebruiker willen aanpassen aan deze gegenereerde ruimte? Wat is de minimale kwaliteit van de gewenste 3D ruimte?  Er zal een requirement analyse moeten gebeuren om te antwoorden op deze vragen.
+Ten slotte is de gebruiksvriendelijkheid ook van groot belang. Het doel van dit onderzoek is het bekomen van een gebruiksvriendelijke applicatie om in te zetten voor de opleiding ergotherapie. Wat is het juist dat een lector van de applicatie verlangt? Waar zouden de studenten de applicatie voor willen gebruiken? Hoeveel zal de gebruiker willen aanpassen aan deze gegenereerde ruimte? Wat is de minimale kwaliteit van de gewenste 3D ruimte?  Er zal een requirement analyse moeten gebeuren om te antwoorden op deze vragen.
 
 
 
@@ -133,7 +132,9 @@ Men gaat een techniek toepassen genaamd Feature Extraction waarbij gemeenschappe
 
 NeRF of Neural Radiance Fields is een vernieuwende manier om overlappende foto’s om te zetten in een point cloud. Anders dan bij fotogrammetrie wordt er bij deze techniek gebruik gemaakt van een neuraal netwerk.
 Een neuraal netwerk is onderdeel van machine learning, een tak van de computerwetenschappen en meer bepaald artificiële intelligentie waarbij statistische algoritmes trachten (zelfstandig)  te leren en generaliseren van bepaalde data. Neurale netwerken worden gebruikt om modellen te bouwen die op hun beurt proberen data te voorspellen op basis van input. 
+
 Het neural network in het geval van NeRF krijgt foto’s toegestopt die hij op zijn beurt zal analyseren. In het kort worden per foto willekeurige ‘lichtstralen’ uitgestuurd. Waar die dan snijden met een bepaald kenmerk, daar krijg je dan een punt. Als je dit blijft herhalen voor meerdere foto’s voor een bepaalde periode, dan krijg je een verzameling van allemaal punten, of een point cloud. 
+
 Door alle foto’s te laten analyseren door het neuraal netwerk krijg je dan een model, dat heet dan een Neural Radiance Field, of NeRF. Informatie over diepte en kleur zit dan vervat in dat model en dan kan je aan de hand van een punt in de ruimte (x,y,z) en de kijkrichting ( θ, Φ) vragen om een output. Dan krijg je dus de dichtheid van het volume en de kijkrichting-afhankelijke straling of ‘radiance’ die de kleur bepaald. Het model zal dus  op elke plaats in de ruimte en elke kijkhoek proberen ‘voorspellen’ hoe het er uit zou moeten zien aan de hand van de foto’s waarmee hij getraind is. \autocite{Mildenhall2020}
 
 Sinds de paper van NeRF uitkwam is er een hele reeks aan vervolg papers gekomen die het proces trachten te optimaliseren. Hoewel NeRF erg traag is in computatie, zijn er methodes ontwikkeld voor het optimaliseren van bijna elk stuk in de pijplijn. Hieronder zijn er een paar opgesomd.
@@ -152,7 +153,7 @@ Je kan objecten verplaatsen, verbuigen of verwijderen.\autocite{NeRFshop23}
 \subsubsection{Gaussian Splatting}
 
 Geïnspireerd door NeRF gaat Gaussian splatting ook Radiance Fields bij houden. Gaussian splatting zal deze keer zonder een neuraal netwerk tewerk gaan. Graphics worden benaderd doormiddel van 3D gaussians, een reeks 3D gauss curves waarvan vorm en doorzichtigheid wordt gebruikt om het originele beeld te benaderen. Die nieuwe beelden worden dan afgetoetst met de originele beelden, om zo tot een accuraat model te komen.
-GS biedt een enorme vooruitgang in kwaliteit en snelheid waaraan beelden kunnen worden geladen. Er is sprake van een real-time rendering. \autocite{kerbl3Dgaussians}
+GS biedt een enorme vooruitgang in kwaliteit en snelheid waaraan beelden kunnen worden geladen. Er is sprake van een real-time rendering. \autocite{Kerbl2023}
 
 \subsubsection{Lidar}
 
@@ -199,11 +200,11 @@ Uit deze requirements maken we onderscheid tussen must-haves, should-haves, coul
 
 \subsection{Long List}
 
-De lijst van alle verschillende mogelijkheden van frameworks, tools en algoritmes. Die wordt dan in een tabel geschreven naast alle requirements met alle must-haves & zoveel mogelijk nice-to-haves.
+De lijst van alle verschillende mogelijkheden van frameworks, tools en algoritmes. Die wordt dan in een tabel geschreven naast alle requirements met alle must-haves en zoveel mogelijk nice-to-haves.
 
 \subsection{Short List en Proof-Of-Concept}
 
-De proof of concept zal dienen als uiteindelijke test voor de frameworks tools & algoritmes die de short list hebben gehaald. 
+De proof of concept zal dienen als uiteindelijke test voor de frameworks tools en algoritmes die de short list hebben gehaald. Een functionele, gebruiksvriendelijke applicatie is hopelijk het resultaat.
 
 \section{Verwachte resultaten}%
 \label{sec:verwachte-resultaten}

@@ -1,19 +1,8 @@
 @Article{ZhongQiuZhao2019,
-  author  = {Zhong-Qiu Zhao, Member, IEEE, Peng Zheng,Shou-tao Xu, and Xindong Wu, Fellow, IEEE},
+  author  = {{Z}hong-{Q}iu {Z}hao, {M}ember, {IEEE}, {P}eng {Z}heng,{S}hou-tao {X}u, and {X}indong {W}u, {F}ellow, {IEEE}},
   journal = {IEEE Transactions on Neural Networks and Learning Systems},
-  title   = {Object Detection with Deep Learning: A Review},
+  title   = {{O}bject {D}etection with {D}eep {L}earning: {A} {R}eview},
   year    = {2019},
-}
-
-@InProceedings{Karakottas2020,
-  author    = {Karakottas, Antonis and Zioulis, Nikolaos and Doumanglou, Alexandros and Sterzentsenko, Vladimiros and Gkitsas, Vasileios and Zarpalas, Dimitrios and Daras, Petros},
-  booktitle = {2020 IEEE International Conference on Multimedia & Expo Workshops (ICMEW)},
-  title     = {Xr360: A Toolkit for Mixed 360 and 3d Productions},
-  year      = {2020},
-  pages     = {1-6},
-  doi       = {10.1109/ICMEW46912.2020.9105984},
-  ranking   = {rank3},
-  url       = {https://ieeexplore.ieee.org/abstract/document/9105984},
 }
 
 @Misc{Wang2023,
@@ -128,13 +117,12 @@
   bibsource  = {dblp computer science bibliography, https://dblp.org},
   biburl     = {https://dblp.org/rec/journals/corr/abs-2003-08934.bib},
   eprint     = {2003.08934},
-  eprinttype = {arXiv},
+  eprinttype = {arxiv},
   ranking    = {rank5},
   timestamp  = {Tue, 24 Mar 2020 16:42:29 +0100},
-  url        = {https://arxiv.org/abs/2003.08934},
 }
 
-@Book{alma9993304067001488,
+@Book{Zhang2023,
   author    = {Zhang, Yu-Jin},
   publisher = {Springer Nature Singapore},
   title     = {3-D Computer Vision: Principles, Algorithms and Applications},
@@ -142,4 +130,19 @@
   address   = {Singapore},
   edition   = {1st ed. 2023.},
   isbn      = {981-19-7580-9},
-  abstract  = {This textbook offers advanced content on computer vision (basic content can be found in its prerequisite textbook, “2D Computer Vision: Principles, Algorithms and Applications”), including the basic principles, typical methods and practical techniques. It is intended for graduate courses on related topics, e.g. Computer Vision, 3-D Computer Vision, Graphics, Artificial Intelligence, etc. The book is mainly based on my lecture notes for several undergraduate and graduate classes I have offered over the past several years, while a number of topics stem from my research publications co-authored with my students. This book takes into account the needs of learners with various professional backgrounds, as well as those of self-learners. Furthermore, it can be used as a reference guide for practitioners and professionals in related fields. To aid in comprehension, the book includes a wealth of self-test questions (with hints and answers). On the one hand, these questions help teachers to carry out online teaching 
+  abstract  = {This textbook offers advanced content on computer vision (basic content can be found in its prerequisite textbook, “2D Computer Vision: Principles, Algorithms and Applications”), including the basic principles, typical methods and practical techniques. It is intended for graduate courses on related topics, e.g. Computer Vision, 3-D Computer Vision, Graphics, Artificial Intelligence, etc. The book is mainly based on my lecture notes for several undergraduate and graduate classes I have offered over the past several years, while a number of topics stem from my research publications co-authored with my students. This book takes into account the needs of learners with various professional backgrounds, as well as those of self-learners. Furthermore, it can be used as a reference guide for practitioners and professionals in related fields. To aid in comprehension, the book includes a wealth of self-test questions (with hints and answers). On the one hand, these questions help teachers to carry out online teaching and interact with students during lectures; on the other, self-learners can use them to assess whether they have grasped the key content.},
+  booktitle = {3-D Computer Vision Principles, Algorithms and Applications},
+  keywords  = {Computer vision},
+  language  = {eng},
+}
+
+@Online{Fisher2014,
+  author = {Matthew Fisher},
+  title  = {Marching Cubes},
+  url    = {https://graphics.stanford.edu/~mdfisher/MarchingCubes.html#:~:text=Marching cubes is a simple,a region of the function.},
+  year   = {2014},
+}
+
+@Repository{Jeong,
+  abstract = {An awesome PyTorch NeRF library},
+  aut
