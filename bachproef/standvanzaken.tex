@@ -6,13 +6,194 @@
 % bijzonder aan wat de link is met het vorige en volgende hoofdstuk.
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
+\subsection{Inleiding}
 
-Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
+Deze literatuurstudie onderzoekt diverse methoden om 3D-omgevingen en objecten virtueel weer te geven en te bekijken. In eerste instantie wordt het concept van stereoscopische foto's en video's uitgelegd, waarbij twee beelden worden gebruikt om een 3D-effect te creëren. Vervolgens wordt de opkomst van virtuele 3D-omgevingen beschreven, die worden gecreëerd met behulp van software zoals Maya en Blender, en worden weergegeven met game-engines zoals Unity en Unreal Engine.
 
-Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz.\ naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${textcite\{\}}} of \texttt{$\backslash${autocite\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\LaTeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin (narratieve referentie), gebruik je \texttt{$\backslash${}textcite\{\}}. Soms is de auteursnaam niet expliciet een onderdeel van de zin, dan gebruik je \texttt{$\backslash${}autocite\{\}} (referentie tussen haakjes). Dit gebruik je bv.~bij een citaat, of om in het bijschrift van een overgenomen afbeelding, broncode, tabel, enz. te verwijzen naar de bron. In de volgende paragraaf een voorbeeld van elk.
+Naast het bekijken van 3D-omgevingen, worden ook verschillende methoden besproken om 3D-objecten virtueel weer te geven. Dit omvat het gebruik van meshes, impliciete functies en point clouds, waarbij elk zijn eigen toepassingen heeft in verschillende industrieën, van entertainment tot wetenschappelijk onderzoek. 
 
-\textcite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\autocite{Creeger2009}.
+Daarnaast worden methoden behandeld om van 2D naar 3D omgevingen te converteren, zoals fotogrammetrie, waarbij overlappende foto's worden gebruikt om gedetailleerde 3D-modellen te genereren, en NeRF (Neural Radiance Fields), een baanbrekende technologie die overlappende foto's omzet in puntenwolken met behulp van neurale netwerken. 
 
-Let er ook op: het \texttt{cite}-commando voor de punt, dus binnen de zin. Je verwijst meteen naar een bron in de eerste zin die erop gebaseerd is, dus niet pas op het einde van een paragraaf.
+Tenslotte worden ook andere technieken belicht, zoals Gaussian Splatting, Lidar, objectherkenning en classificatie, oriëntatie van objecten, en assetgeneratie, die allemaal bijdragen aan de evolutie van 3D-modellering en -visualisatie in diverse toepassingsgebieden.
 
-\lipsum[7-20]
+\subsection{Wat is Virtual Reality}
+
+Virtual Reality (VR) is een verzamelterm voor alomvattende simulaties die gebruik maken van stereoscopische foto’s of drie-dimensionale virtuele ruimtes waarmee een gebruiker kan interageren. Je “stapt” als het ware in een virtuele omgeving. (Rosson2014) Ze kunnen bekeken worden met Head Mounted Displays (HDMs) of VR-headsets ook genaamd, maar ook bijvoorbeeld met 360 graden projector opstellingen. De bedoeling is namelijk dat de gebruiker zich volledig omcirkeld voelt door de virtuele omgeving. 
+
+Om het gevoel van inleving zo groot mogelijk te maken,  maakt men gebruik van technologieën als head tracking om het beeld voor de ogen gelijktijdig mee te bewegen als de hoofdbewegingen. Audio dient ook als katalysator om de ervaring echter en vlotter te doen lijken. Ook interactie met de omgeving moet hierbij helpen en gebeurd met handbewegingen en camera’s die de handen op hun beurt filmen. Vooral specifieke controllers die je in de handen houdt om je virtuele handen te besturen worden gebruikt.
+VR kan bij sommige mensen verschillende symptomen veroorzaken die als onprettig kunnen worden ervaren. Voorbeelden hiervan zijn misselijkheid, oogmoeheid en desoriëntatie. (Regan1995) Bijgevolg is VR niet bedoeld om voor langere periodes te gebruiken, maar eerder in korte sessies.
+
+\subsection{Tools om VR-toepassingen mee te bouwen}
+
+Om een Virtual Reality toepassing te bouwen heb je een tool nodig die dit ondersteund. We moeten het wiel niet heruitvinden maar echter gebruik maken van templates, packages en api’s gemaakt door game-engine ontwikkelaars. De ene game-engine is de andere niet. Voor de ene heb je al wat meer programmeer ervaring nodig als de andere. In deze sectie word er overlopen welke opties beschikbaar zijn. 
+
+\subsubsection{Unity}
+Unity is een game-engine waarmee je cross-platform applicaties mee kan bouwen. Je kan er mee aan de slag voor desktop, mobile, console en dus ook VR.  Er kunnen zo wel in 2D als 3D games mee gecreëerd worden.(unity2024)
+Unity bied een specifieke manier van game architectuur aan genaamd DOTS. Dots is een verzameling van technologieën en packages die een data-georiënteerde aanpak hebben om games en simulaties te bouwen. Hierdoor worden prestaties hoger en kunnen potentieel miljoenen game-objecten tegelijkertijd berekend worden. DOTS is een implementatie van een Entity Component System (ECS), en zo’n systeem is goed in het lineair opvragen en overlopen van data sets. Het zou eventueel gebruikt kunnen worden om miljoenen “gaussian splats” in te laden en te bewerken.  
+Neufkens2023 kwam in zijn bachelor proef tot de conclusie dat unity de meest geschikte game engine is om een VR-applicatie te bouwen, dus word er niet getwijfeld welke game-engine de meest geschikte is in dit onderzoek. Wel word er overlopen welke opties er nog zo zijn. 
+
+\subsubsection{Unreal}
+Een andere populaire game-engine vergelijkbaar met Unity. Unreal heeft zijn eigen set van tools en mogelijkheden voor het bouwen van cross-platform apps, ook inclusief VR.
+
+\subsubsection{Amazon Sumerian}
+Een cloud gebasseerd platform om Virtual Reality applicaties mee te bouwen zonder diepgaande programmeerkennis. 
+
+\subsubsection{Google VR}
+Een verzameling van tools aangeboden door Google voor het ontwikkelen van vr-applicaties.
+
+\subsubsection{CryEngine}	
+Een krachtige game-engine bekend om zijn verbluffende grafische mogelijkheden en geavanceerde tools voor het bouwen van realistische VR omgevingen.
+
+\subsubsection{Blender}
+Hoewel Blender in feite als open-source 3D-modelleringsprogramma bekend is, kunnen er ook VR-toepasingen gebouwd worden met de tool. 
+
+
+
+
+
+\subsection{Bestaande VR-toepassingen in het onderwijs gezondheidszorg en ergotherapie}
+
+In de moderne medische wereld worden VR tools steeds meer ingezet als innovatief leermiddel voor medische professionals en studenten. Deze applicaties bieden mogelijkheden om complexe procedures te oefenen en menselijke anatomie op een niet-invasieve manier te bestuderen. 
+\subsubsection{Anatomische simulaties}
+Een opvallend voorbeeld hiervan is de ontwikkeling van VR simulaties die chirurgen in staat stellen om te oefenen zonder de noodzaak van lichaamsdonoren. Door realistische virtuele omgevingen te creëren, kunnen chirurgen verschillende chirurgische ingrepen oefenen en verfijnen, wat de veiligheid en effectiviteit van medische procedures kan verbeteren. 
+
+\subsubsection{Virtuele gereedschapstraining}	
+Daarnaast kan VR ook worden ingezet om bepaald medisch gereedschap aan te leren zonder dat hier een trainer voor moet worden ingezet. Dit brengt de kost naar beneden voor zo wel de onderwijs instituten als voor ziekenhuizen. (Jiang2022)
+
+\subsubsection{Communicatievaardigheden}
+Een toepassing van VR in het medisch onderwijs is het gebruik ervan om communicatie en empathie aan te leren. Dit tegenover patiënten met specifieke behoeften zoals ouderen, personen met gehoorproblemen, of patiënten met neurodegeneratieve aandoeningen zoals Alzheimer. Door middel van virtuele avatars kunnen ze interactieve scenario's ervaren waarin ze leren hoe ze effectief kunnen communiceren en empathie kunnen tonen tegenover diverse soorten patiënten. (Gugliucci2019)
+
+\subsection{Manieren om 3D-Objecten virtueel weer te geven}
+
+Er zijn verschillende manieren om zo’n virtuele omgeving weer te geven, en elke manier heeft zo zijn eigen toepassingen.  TODO
+
+\subsubsection{Mesh}
+
+Een mesh is een drie-dimensinale vorm, die bepaald word door 2-dimensionale vormen die met elkaar verbonden zijn. Mesh bestaan meestal enkel uit driehoeken. Grafische kaarten zijn erg efficiënt geworden in het berekenen van de positie van zo'n vormen op het scherm. Die twee-dimensionale vormen worden ook wel Polygons genoemd.  \autocite{Luebke2002} 
+Een mesh van een object definieert de vorm, maar om de kleur te bepalen moet er een textuur geven aan het 3D-object. Een textuur is meestal een afbeelding die rond het object word 'gewrapped'.
+Daarnaast heb je ook de shinyness van het object, en die word weer bepaald door een 'material'. Zo'n material bepaald hoe sterk het licht word gereflecteerd. 
+
+\subsubsection{Impliciete functies}
+
+Vormen in 3 dimensies kunnen weergegeven worden als wiskundige functies. Het is zelfs mogelijk complexere vormen te maken door het combineren van verschillende functies. Een nadeel is hier dat wij als mens slechts beperkt zijn in het combineren van genoeg functies om een juiste interpretatie trachten te maken van bijvoorbeeld een doornstruik.  Hiervoor zijn nieuwe methodes nodig zoals bv.  machine learning  of gaussian splatting zoals we hieronder bespreken. \autocite{Tancik2023}
+
+\subsubsection{Point Cloud}
+
+Een point cloud is een andere manier van om 3D-model te representeren. Het is een groep van samenhangende punten die in hun geheel een omgeving, of object moeten voorstellen. Het is in feite een representatie van de coördinaten van een object of een oppervlak, en bestaat uit een groep van punten die alle drie de dimensies voorstellen (x,y,z). \autocite{Sai2023}
+Deze manier van voorstellen is onder andere het resultaat van laser scanners of NeRF modellen. De granulariteit en kleur voorstelling van de punten kunnen worden aangepast aan de noden van de toepassing. 
+Point cloud data kan omgezet worden in een mesh door middel van algoritmes als Ball Pivoting Algorithm of Marching Cubes. \autocite{Fisher2014}
+
+\subsection{Manieren om 3D-Omgevingen te bekijken}
+\subsubsection{Stereoscopische foto’s/video’s }
+
+Stereoscopie betekend het bekijken van 2 beelden. Doormiddel van twee beelden te laten zien, denken onze hersenen dat een beeld in 3 dimensies bekijken. De camera die op de HOGENT beschikbaar is, is de Ricoh Theta Z1. Die camera maakt doormiddel van twee lenzen een beeld van een ruimte in alle richtingen. Softwarematig wordt dit beeld dan samengevoegd tot een bolvormige foto. Als kijker word je dan als het ware in het middelpunt van de bol gezet en kan je vervolgens rondkijken in de foto alsof het een echte 3-dimensionale foto was. 
+
+\subsubsection{Virtuele 3D omgeving}
+
+Een virtuele 3D omgeving is een ruimte gecreëerd door middel van software. Structuren en objecten hebben een volume, een textuur en belichting waardoor er een idee van ruimte ontstaat. Toepassingen zijn te vinden in entertainment zoals films en games, maar ook simulaties en in dit geval didactisch. Het grote verschil met stereoscopische foto’s en video’s is dat in een 3D omgeving objecten uit verschillende hoeken kunnen worden bekeken en er eventueel zelfs invloed kan worden uitgeoefend op de omgeving. Software als Maya of Blender worden gebruikt om 3D objecten te maken, terwijl game engines als Unity of Unreal Engine gebuikt worden om de interactiviteit te verzorgen. 
+
+
+
+\subsection{Omzetten naar een 3D-omgeving}
+
+inleiding TODO
+
+\subsubsection{Foto's en video's}
+Eerste stap is om foto- of video-materiaal te nemen van de omgeving. Hiervoor kan men gebruik maken van verschillende soorten camera's. TODO
+
+\subsubsection{Lidar}
+
+LIDAR of Laser Imaging Detection And Ranging is een techniek die, zoals het zelf zegt, de afstand tot een object bepaald tot een object. Het kan heel precies de vorm van een omgeving scannen en wordt gebruikt in velden als agricultuur, archeologie en zelfrijdende auto’s. Je hebt er gespecialiseerde sensors voor nodig om zo’n metingen te kunnen uitvoeren.
+
+\subsubsection{RGBD}
+
+LIDAR of Laser Imaging Detection And Ranging is een techniek die, zoals het zelf zegt, de afstand tot een object bepaald tot een object. Het kan heel precies de vorm van een omgeving scannen en wordt gebruikt in velden als agricultuur, archeologie en zelfrijdende auto’s. Je hebt er gespecialiseerde sensors voor nodig om zo’n metingen te kunnen uitvoeren.
+
+\subsubsection{Manueel modelleren van omgeving}
+wat, waarom hier, besproken mesh, bewerkingstools zoals blender, ... TODO
+
+\subsubsection{Point cloud }
+Zoals hierboven reeds besproken is een point cloud een representatie van een reëel object op basis van verschillende punten met elk een driedelig coördinaat. 
+
+
+\subsubsection{Fotogrammetrie}
+
+Het nemen van een foto is eigenlijk een projectie van een 3D-scène maken op een 2D-vlak, waarbij er informatie over de diepte verloren gaat. Het doel van fotogrammetrie is eigenlijk het tegenovergestelde: men wil aan de hand van overlappende foto’s een zo gedetailleerd mogelijke 3D omgeving genereren. \autocite{FormLabs}
+Men gaat een techniek toepassen genaamd Feature Extraction waarbij gemeenschappelijke kenmerken in foto’s efficiënt worden opgeslagen en vergeleken met andere foto’s. Op die manier kan men de positie van de camera-poses van de originele foto’s berekenen. Door die poses en de gemeenschappelijke kenmerken te vergelijken, kan men een 3D schatting maken van de positie van deze kenmerken, dat heet Structure from motion (SfM) \autocite{Schonberger2016}. Daarna zal er een mesh worden gegenereerd op basis van deze structuur en wordt per camera vergeleken welke kleur overeenkomt met een kenmerk, om zo een texture te bekomen. Die zal dan door middel van een UV map op de 3D structuur worden geplakt. Een veelgenoemd software pakket voor SfM te berekenen is COLMAP. Voor fotogrammetrie heb je dan weer 3DF Zephyr of AliceVision. 
+
+\subsubsection{NeRF}
+
+NeRF of Neural Radiance Fields is een vernieuwende manier om overlappende foto’s om te zetten in een point cloud. Anders dan bij fotogrammetrie wordt er bij deze techniek gebruik gemaakt van een neuraal netwerk.
+Een neuraal netwerk is onderdeel van machine learning, een tak van de computerwetenschappen en meer bepaald artificiële intelligentie waarbij statistische algoritmes trachten (zelfstandig)  te leren en generaliseren van bepaalde data. Neurale netwerken worden gebruikt om modellen te bouwen die op hun beurt proberen data te voorspellen op basis van input. 
+
+Het neural network in het geval van NeRF krijgt foto’s toegestopt die hij op zijn beurt zal analyseren. In het kort worden per foto willekeurige ‘lichtstralen’ uitgestuurd. Waar die dan snijden met een bepaald kenmerk, daar krijg je dan een punt. Als je dit blijft herhalen voor meerdere foto’s voor een bepaalde periode, dan krijg je een verzameling van allemaal punten, of een point cloud. 
+
+Door alle foto’s te laten analyseren door het neuraal netwerk krijg je dan een model, dat heet dan een Neural Radiance Field, of NeRF. Informatie over diepte en kleur zit dan vervat in dat model en dan kan je aan de hand van een punt in de ruimte (x,y,z) en de kijkrichting ( θ, Φ) vragen om een output. Dan krijg je dus de dichtheid van het volume en de kijkrichting-afhankelijke straling of ‘radiance’ die de kleur bepaald. Het model zal dus  op elke plaats in de ruimte en elke kijkhoek proberen ‘voorspellen’ hoe het er uit zou moeten zien aan de hand van de foto’s waarmee hij getraind is. \autocite{Mildenhall2020}
+
+Sinds de paper van NeRF uitkwam is er een hele reeks aan vervolg papers gekomen die het proces trachten te optimaliseren. Hoewel NeRF erg traag is in computatie, zijn er methodes ontwikkeld voor het optimaliseren van bijna elk stuk in de pijplijn. Hieronder zijn er een paar opgesomd.
+
+Nerf Studio is een API  geschreven door de originele bedenkers van NeRF. Je kan er op een makkelijke manier NeRFs creëren, trainen en testen. \autocite{Tancik2023a}
+
+InpaintNeRF360 is een framework dat taal gebruikt om een Neural Radiance Field te bewerken. Dit gebeurd door middel van de training foto’s te bewerken met een generatief model dat gegeven foto’s kan bewerken door middel van een prompt. \autocite{Wang2023a}
+
+
+Nvidia Instant Nerf is een framework gebouwd door onderzoek ondersteund door Nvidia. Je kan er op enkele minuten tijd een NeRF model mee trainen. In een 10-tal ms kan je neurale graphics renderen. Het model zelf trainen duurt volgens hen slechts 5 minuten. 
+\autocite{Mueller2022}
+
+NeRF Shop is een tool om een point cloud model mee te bewerken. Door het aanduiden van een deel van het model door middel van wat krabbels, kan de software volume detecteren. Na vervolgens het kiezen hoeveel je van het volume wil selecteren, kan je beginnen aanpassen. 
+Je kan objecten verplaatsen, verbuigen of verwijderen.\autocite{NeRFshop23}
+
+\subsubsection{Gaussian Splatting}
+
+Geïnspireerd door NeRF gaat Gaussian splatting ook Radiance Fields bij houden. Gaussian splatting zal deze keer zonder een neuraal netwerk tewerk gaan. Graphics worden benaderd doormiddel van 3D gaussians, een reeks 3D gauss curves waarvan vorm en doorzichtigheid wordt gebruikt om het originele beeld te benaderen. Die nieuwe beelden worden dan afgetoetst met de originele beelden, om zo tot een accuraat model te komen.
+GS biedt een enorme vooruitgang in kwaliteit en snelheid waaraan beelden kunnen worden geladen. Er is sprake van een real-time rendering. \autocite{Kerbl2023}
+
+
+\subsubsection{Object herkenning en classificering}
+
+Het doel van object herkenning is het herkennen van bepaalde kenmerken en die linken aan een bepaald woord, of classificering. Hierboven werd kort gesproken over Feature Extraction. Net zoals daar wordt gebruik gemaakt van een algoritme zoals bijvoorbeeld SIFT van \textcite{Schonberger2016} om het in kaart te brengen van prominente kenmerken waarmee we aan de slag kunnen. 
+Een andere manier van werken zou kunnen zijn om de omgeving te scannen op objecten door middel van object herkenning en classificering. Op basis van die data zou je voorgeprogrammeerde objecten kunnen samenvoegen in een ruimte. 
+Enkele voorbeelden van platforms waar je modellen zou kunnen trainen zijn Tensorflow, Pytorch, Azure Vision Studio of customvision.ai. 
+
+\subsubsection{Oriëntatie van objecten}
+
+Het bepalen van de oriëntatie van een gedetecteerd object is nodig wanneer je de ruimte wil nabootsen. Een bed staat meestal evenwijdig met de muur bijvoorbeeld. \textcite{Saxena2009} stelt een manier voor bijvoorbeeld om de oriëntatie van een object te proberen achterhalen.
+
+\subsubsection{Asset generatie}
+
+Door middel van object detectie kunnen we ofwel een voorgemaakt model tonen op basis van de semantiek van het gedetecteerd object. Een andere mogelijkheid is om het gevonden object in een generatief model in te geven. Er zijn een aantal projecten lopende die prompts omzetten in 3D modellen: 
+\textcite{Raj2023} stelt dreambooth3d voor. Een algoritme om met enkele foto’s en een tekst-prompt  een 3D-model te genereren.
+\textcite{Xu2023} stelt dan weer Neuralift – 360 voor.  Een algoritme om een 3D model te genereren vanuit één enkele foto.
+
+\subsection{Aanpak om een 3D-omgeving te kunnen bewerken}
+Bespreken 3D software, maar ook specifieke tools, bedoeling om tools te implementeren 
+
+
+In dit deel word er besproken welke software pakketten er beschikbaar zijn om de verschillende 3D-omgevingen en hun formaten te kunnen bewerken. Daarnaast word ook specifiek gekeken naar de manieren waarop je een 3D model kan bewerken. Dit voor zo wel mesh als point cloud. 
+q\subsubsection{3D – graphics software}
+
+Er zijn verschillende software pakketten beschikbaar als het gaat over het bewerken van bestaande 3D-modellen. Ze worden gebruikt om texturen en materialen te ontwerpen voor het 
+Je kan 3D modellen in mesh creëren in 3D-ontwikelings platformen zoals Blender, Maya, Cinema4D, After Effects, SketchUp, … . Buiten modelerern kan je er ook mee renderen, animeren , visual effects mee maken, motion tracking, …
+
+\subsubsection{Bewerkingstools voor meshes}
+•	Vertex bewerking
+•	Edge bewerking
+•	Sculpting
+•	Procedural Editing
+•	UV editing
+•	Topology editing
+•	Retopology
+•	Weight Painting
+
+\subsubsection{Bewerkingstools voor point clouds}
+Puntenselectie zo wel enkel als in groep
+Translatie, rotatie en schaling
+Verwijderen
+Clipping & cropping => Bepalen hoeveel van de point cloud er kan worden gezien
+Smoothing & Filtering => verwijderen van uitspringers & ongewenste artifacten
+Interpolatie => invullen van missende of onvolledige data (zie inpainting Nerf)
+Kleur en intensiteit bewerking van punten
+point cloud segmentation
+Gaussian Inpainting
+
+\subsection{Conclusie}
