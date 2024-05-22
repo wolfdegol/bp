@@ -10,13 +10,13 @@
 %% de doelstelling was, welke deliverables daar uit gekomen zijn, en welke
 %% onderzoeksmethoden je daarbij toegepast hebt. Verantwoord waarom je
 %% op deze manier te werk gegaan bent.
-%% 
+%%
 %% Voorbeelden van zulke fasen zijn: literatuurstudie, opstellen van een
 %% requirements-analyse, opstellen long-list (bij vergelijkende studie),
 %% selectie van geschikte tools (bij vergelijkende studie, "short-list"),
 %% opzetten testopstelling/PoC, uitvoeren testen en verzamelen
 %% van resultaten, analyse van resultaten, ...
-%%  
+%%
 %% !!!!! LET OP !!!!!
 %%
 %% Het is uitdrukkelijk NIET de bedoeling dat je het grootste deel van de corpus
@@ -25,32 +25,44 @@
 %%
 %% Maak voor elke fase (behalve het literatuuronderzoek) een NIEUW HOOFDSTUK aan
 %% en geef het een gepaste titel.
-intro methodologie TODO
+Voor deze scriptie wordt geopteerd om een kwalitatief onderzoek uit te voeren. Meer specifiek word er een vergelijkende studie gedaan om te bepalen welk framework het meest geschikt is om een 3D-ruimte te genereren. Mede met het resultaat van dat onderzoek stellen we vervolgens de requirements op voor een ander vergelijkend onderzoek.
+Er wordt getracht te bepalen welke functionaliteiten een applicatie moet voorzien om een 3D-ruimte te kunnen aanpassen in real-time, rekening houdend met de wensen van de klant, in dit geval lectoren en studenten ergotherapie.
+
 \subsection{Literatuuronderzoek}
- De eerste fase omvat een literatuurstudie waar alles omtrent het genereren, bekijken en bewerken van 3D-modellen wordt beschreven. Op die manier word er een beter beeld gecreëerd van alle beschikbare tools en manieren van aanpak die er zijn. Daarna word er twee maal een lijst van requirements opgesteld 
+
+ De eerste fase omvat een literatuurstudie waar alles omtrent het genereren, bekijken en bewerken van 3D-modellen wordt beschreven. Op die manier word er een beter beeld gecreëerd van alle beschikbare tools en manieren van aanpak die er zijn en kunnen er requirements worden opgesteld op berekende wijze.
 -
 
-\subsection{MoSCoW}
-Een requirementanalyse onderzoekt wat er precies nodig is in een applicatie. Welke requirements zijn van essentieel belang, welke functies zijn niet essentieel maar zouden er wel in moeten zitte, welke functies zijn ook niet essentieel, maar wel fijn om er bij te hebben, en welke functionaliteiten willen we niet implementeren. 
+\subsection{MoSCoW analyse}
 
-Hier wordt in feite een MoSCoW-analyse beschreven. MoSCoW staat voor Must Have, Should Have, Could Have en Wont Have. De bedoeling is om de verzameling van functionele- en niet-funcionele requirements op te lijsten en onder te verdelen in deze categorieën. Ten slotte krijgen we een lijst van de meest geschikte requirements en kunnen we daar verder mee aan de slag. 
+Requirements beschrijven de functionaliteiten van een applicatie. Sommige zijn al wat belangrijker als anderen, en daarom is het belangrijk om deze te prioriteren.
+Hier wordt in feite een MoSCoW-analyse beschreven. MoSCoW staat voor Must Have, Should Have, Could Have en Wont Have. De bedoeling is om de verzameling van functionele- en niet-funcionele requirements op te lijsten en onder te verdelen in deze categorieën. Als resultaat krijgen we een backlog met geprioriteerde requirements waarmee we een overwogen beslissing kunnen maken dewelke nu effectief kunnen worden geimplementeerd in een proof-of-concept. (TODO bron moscow)
 
 \subsection{Vergelijkende studie omzetten naar 3D }
 
-In de eerste studie word er achterhaald welke manier van aanpak om een reële omgeving om te zetten in een virtuele omgeving, de meest geschikte is. Dit is namelijk een van de deelvragen die mee zal moeten antwoorden hoe er best een applicatie wordt ontwikkeld die een dynamische, aanpasbare 3D ruimte kan genereren. 
+In de eerste studie word er achterhaald welke manier van aanpak om een reële omgeving om te zetten in een virtuele omgeving, de meest geschikte is. Dit is namelijk een van de deelvragen die mee zal moeten antwoorden hoe een applicatie wordt kan worden ontwikkeld die een dynamische, aanpasbare 3D ruimte kan genereren.
 
-Aan de hand van de informatie die er verworven wordt in de literatuurstudie, word er een requirementanalyse gedaan om te antwoorden op deze deelvraag. Meer specifiek maken we gebruik van de MoSCoW-methode 
-2oplijsten van requirements & kleine beschrijving
-3in tabel met functioneel/niet-functioneel & moscow 
+Eerst worden de requirements opgesteld en onderverdeeld in functioneel/niet-functioneel en worden geprioriteerd door middel van een MoSCow analyse.
+
+In de stand van zaken wordt een overzicht gegeven van de bestaande technieken om 3D-omgevingen te genereren. Vervolgens word in de vergelijkende studie er een long list opgesteld die specifieke frameworks oplijst die deze technieken toepassen. Bij elk framework wordt kort ingegaan op de mogelijkheden, voordelen en nadelen.
+
+Ten slotte word op basis van de vooraf opgestelde requirements deze lijst beperkt tot één of enkele geschikte frameworks, of de shortlist ook genaamd. Alle frameworks worden afgetoetst met alle opgestelde requirements. Deze framework(s) die dan overblijven, zijn dan één van de requirements van de volgende vergelijkende studie die onderzoekt welke tools het meest geschikt zijn om de gegenereerde 3D ruimte te kunnen bewerken in real-time.
+
 
 \subsection{Vergelijkende studie bewerken van 3D }
-1intro, wat word er hier besproken? TODO
-2oplijsten van requirements & kleine beschrijving
-3in tabel met functioneel/niet-functioneel & moscow 
+
+De tweede vergelijkende studie wil achterhalen welke manier van werken het meest geschikt is om de gegenereerde 3D ruimte te kunnen bewerken. Dit hangt nauw samen met het resultaat van het eerste vergelijkend onderzoek omdat dit bepaald in welke manier de 3D omgeving zal worden gerepressenteerd. Er zijn verschillende technieken om verschillende repressentaties van 3D ruimtes te bewerken.
+
+Ten eerste worden de requirements opgesteld, onderverdeeld in functioneel/niet-functioneel en worden geprioriteerd door middel van MoSCoW.
+Dan word er nog eens een korte samenvatting gegeven over alle beschikbare technieken die beschikbaar zijn om de 3D ruimte te kunnen aanpassen, met daarbij hun voor en nadelen.
+
+Als laatste wordt een tabel opgesteld waarin alle opgelijste technieken worden afgetoetst met de vooraf opgestelde requirements. Op deze manier komen we tot een conclusie die bepaald welke technieken de meest geschikte zijn om te implementeren in de proof-of-concept.
 
 
 \subsection{Proof of concept}
+
+Als laatste deel van het onderzoek zal een proof of concept worden gemaakt. Dit is een applicatie die op basis van de resultaten van de twee voorgaande onderzoeken word geconstructeerd.
 intro poc TODO
 oplijsten succescriteria
 
-\subsection{Conclusie} \subsection{Proof of concept}
+\subsection{Conclusie}
