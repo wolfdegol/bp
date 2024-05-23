@@ -7,35 +7,48 @@
 
 \subsection{Inleiding}
 
-In dit hoofdstuk word er gekeken wat de requirements voor het genereren van een 3D-ruimte zijn in dit geval. Vervolgens worden die requirements opgedeeld in functionele en niet funtionele requirements om daarna ook geprioriseerd te worden volgens belang. Dit doen we aan de hand van een MoScow analyse. Dan zal er overlopen
+In dit hoofdstuk word er onderzocht welke manier van aanpak om een reële omgeving om te zetten in een virtuele 3D-omgeving de meest geschikte is. Dit gebeurt door de requirements op te sommen en onderverdelen in functioneel/niet-functionele requirements en vervolgens te prioriteren door middel van een MoSCoW analyse.
+Vervolgens worden verschillende mogelijkheden van frameworks opgesomd met daarbij hun voor- en nadelen.
+Ten slotte word op basis van de vooraf opgestelde requirements de lijst met frameworks beperkt tot één geschikt framework.
+Dit framework is dan één van de requirements voor de volgende vergelijkende studie. Die onderzoekt welke tools het meest geschikt zijn om de gegenereerde 3D ruimte te kunnen bewerken in real-time.
 
 \subsection{Functionele Requirements}
 
-Functionele requirements beschrijven de specifieke functies en features die een systeem moet bieden om aan de behoeften van de gebruikers te voldoen. Deze eisen richten zich op wat het systeem moet kunnen doen. Voor deze bachelorproef toegepaste informatica zijn de volgende functionele requirements opgesteld.
+Functionele requirements beschrijven de technische noden die het framework moet vervullen om aan de  behoeften van de gebruikers te voldoen.
 
-\subsubsection{Gebruiksvriendelijk}
+ Voor deze bachelorproef toegepaste informatica zijn de volgende functionele requirements opgesteld. (TODO bron functionele requirements)
 
-Het moet gemakkelijk zijn om de 3D-ruimte te creëren met deze manier van werken. Dit betekent dat de methode ook toegankelijk moet zijn voor mensen zonder modelleer- of programmeerkennis, zodat een brede gebruikersgroep ermee kan werken.
-
-\subsubsection{Aanpasbaar geluid}
+\subsubsection{Als gebruiker wil ik geluiden of muziek toevoegen}
 
 Volgens de studie van \textcite{Raes2023} kan het toevoegen van geluid in een simulatie het inlevingsvermogen vergroten, mits het volume beperkt blijft en de geluidskeuze aangenaam is. Het kunnen toevoegen en aanpassen van geluid is daarom een nuttige functionaliteit.
 
-\subsubsection{Aanpasbare vorm}
+\subsubsection{Als gebruiker kan ik de gegenereerde omgeving aanpassen}
 
-Dit houdt in dat de omgeving flexibel moet zijn. In overleg met co-promotor Jana Van Damme is afgesproken dat het verplaatsen of verwijderen van objecten mogelijk moet zijn. Het aanpassen van de omgeving zorgt voor een interactief aspect, wat de aandachtsspanne van leerlingen verhoogt en een didactische meerwaarde biedt.
+Dit houdt in dat de omgeving flexibel moet zijn. In overleg met copromotor Jana Van Damme is afgesproken dat het verplaatsen of verwijderen van objecten mogelijk moet zijn. Het aanpassen van de omgeving zorgt voor een interactief aspect, wat de aandachtsspanne van leerlingen verhoogt en een didactische meerwaarde biedt.
 
-\subsubsection{Aanpasbaar licht}
+\begin{itemize}
+    \item Als gebruiker kan ik objecten verplaatsen
+    \item Als gebruiker kan ik objecten toevoegen
+    \item Als gebruiker kan ik objecten verwijderen
+\end{itemize}
+
+\subsubsection{Als gebruiker kan ik de belichting van de omgeving aanpassen}
 
 De studie van \textcite{Raes2023} haalt ook aan dat het verlichten van de omgeving een positieve invloed kan hebben op mensen met dementie. Daarmee is het ook aangewezen dat de verlichting eventueel kan worden aangepast in het resultaat van het genereren van de 3D-omgeving. De interactiviteit geeft ook hier een didactische meerwaarde.
 
-\subsubsection{Compabiliteit aanwezige tools}
+\subsubsection{Het framework is compatibel met de beschikbare hardware en software}
 
 Belangrijk is ook dat de gekozen software of algoritmes kunnen functioneren op de aanwezige hardware van de HoGent. Er is enkel een VR-headset beschikbaar, de Meta Quest 2.
 
 \subsection{Niet-functionele requirements}
 
-Niet-functionele requirements beschrijven de kwaliteitseisen en beperkingen van een systeem, die niet direct gerelateerd zijn aan specifieke functies of features. Deze eisen richten zich op hoe het systeem moet presteren en functioneren onder bepaalde omstandigheden. In het kader van deze bachelorproef toegepaste informatica, zijn de volgende niet-functionele requirements van belang
+Niet-functionele requirements beschrijven de kwaliteitseisen en beperkingen van een systeem, die niet direct gerelateerd zijn aan specifieke functies of features. Deze eisen richten zich op hoe het systeem moet presteren en functioneren onder bepaalde omstandigheden.
+
+In het kader van deze bachelorproef toegepaste informatica, zijn de volgende niet-functionele requirements van belang
+
+\subsubsection{Gebruiksvriendelijk}
+
+Het moet gemakkelijk zijn om de 3D-ruimte te creëren met deze manier van werken. Dit betekent dat de methode ook toegankelijk moet zijn voor mensen zonder modelleer- of programmeerkennis, zodat een brede gebruikersgroep ermee kan werken. Het framework aan zich kan geïmplementeerd worden binnen een applicatie waardoor de technische kant verborgen wordt voor de gebruiker, maar hoe minder tussenstappen er genomen moeten worden tussen het scannen van de omgeving tot het genereren van de 3D-ruimte, hoe beter.
 
 \subsubsection{Haalbaarheid}
 
