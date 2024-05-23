@@ -23,7 +23,7 @@ Virtual Reality (VR) is een verzamelterm voor alomvattende simulaties die gebrui
 Om het gevoel van inleving zo groot mogelijk te maken,  maakt men gebruik van technologieën als head tracking om het beeld voor de ogen gelijktijdig mee te bewegen als de hoofdbewegingen. Audio dient ook als katalysator om de ervaring echter en vlotter te doen lijken. Ook interactie met de omgeving moet hierbij helpen en gebeurd met handbewegingen en camera’s die de handen op hun beurt filmen. Vooral specifieke controllers die je in de handen houdt om je virtuele handen te besturen worden gebruikt.
 VR kan bij sommige mensen verschillende symptomen veroorzaken die als onprettig kunnen worden ervaren. Voorbeelden hiervan zijn misselijkheid, oogmoeheid en desoriëntatie. (Regan1995) Bijgevolg is VR niet bedoeld om voor langere periodes te gebruiken, maar eerder in korte sessies.
 
-\subsection{Tools om VR-toepassingen mee te bouwen}
+\subsection{Tools om VR-toepassingen mee te bouwen} \label{bouwen}
 
 Om een Virtual Reality toepassing te bouwen heb je een tool nodig die dit ondersteund. We moeten het wiel niet heruitvinden maar echter gebruik maken van templates, packages en api’s gemaakt door game-engine ontwikkelaars. De ene game-engine is de andere niet. Voor de ene heb je al wat meer programmeer ervaring nodig als de andere. In deze sectie word er overlopen welke opties beschikbaar zijn.
 
@@ -98,8 +98,8 @@ Een virtuele 3D omgeving is een ruimte gecreëerd door middel van software. Stru
 
 inleiding TODO
 
-\subsubsection{Foto's en video's}
-Eerste stap is om foto- of video-materiaal te nemen van de omgeving. Hiervoor kan men gebruik maken van verschillende soorten camera's. TODO
+De eerste stap om een 3D omgeving te creëren is bepalen op welke informatie de virtuele omgeving gebaseerd is. Foto's of video's kunnen gemaakt worden, laser scanners kunnen worden gebruikt, diepte camera's kunnen worden ingezet of gewoon volledig fictieve 3D modellen met de hand gemaakt of gegenereerd door diffusion models.
+
 
 \subsubsection{Lidar}
 
@@ -111,6 +111,9 @@ LIDAR of Laser Imaging Detection And Ranging is een techniek die, zoals het zelf
 
 \subsubsection{Manueel modelleren van omgeving}
 wat, waarom hier, besproken mesh, bewerkingstools zoals blender, ... TODO
+
+Een mogelijkheid om een reële omgeving om te zetten in een 3D ruimte is door ze manueel modelleren. Men maakt dan gebruik van modelleringssoftware zoals besproken in \ref{bouwen}. Er zijn dus verschillende software tools beschikbaar om dit te realiseren. Echter is er kennis van zaken nodig om te beginnen met zulke software pakketten.
+
 
 \subsubsection{Point cloud }
 Zoals hierboven reeds besproken is een point cloud een representatie van een reëel object op basis van verschillende punten met elk een driedelig coördinaat.
@@ -159,7 +162,7 @@ Enkele voorbeelden van platforms waar je modellen zou kunnen trainen zijn Tensor
 
 Het bepalen van de oriëntatie van een gedetecteerd object is nodig wanneer je de ruimte wil nabootsen. Een bed staat meestal evenwijdig met de muur bijvoorbeeld. \textcite{Saxena2009} stelt een manier voor bijvoorbeeld om de oriëntatie van een object te proberen achterhalen.
 
-\subsubsection{Asset generatie}
+\subsubsection{Diffusie modellen }
 
 Door middel van object detectie kunnen we ofwel een voorgemaakt model tonen op basis van de semantiek van het gedetecteerd object. Een andere mogelijkheid is om het gevonden object in een generatief model in te geven. Er zijn een aantal projecten lopende die prompts omzetten in 3D modellen:
 \textcite{Raj2023} stelt dreambooth3d voor. Een algoritme om met enkele foto’s en een tekst-prompt  een 3D-model te genereren.
@@ -170,7 +173,7 @@ Bespreken 3D software, maar ook specifieke tools, bedoeling om tools te implemen
 
 
 In dit deel word er besproken welke software pakketten er beschikbaar zijn om de verschillende 3D-omgevingen en hun formaten te kunnen bewerken. Daarnaast word ook specifiek gekeken naar de manieren waarop je een 3D model kan bewerken. Dit voor zo wel mesh als point cloud.
-q\subsubsection{3D – graphics software}
+\subsubsection{3D – graphics software}
 
 Er zijn verschillende software pakketten beschikbaar als het gaat over het bewerken van bestaande 3D-modellen. Ze worden gebruikt om texturen en materialen te ontwerpen voor het
 Je kan 3D modellen in mesh creëren in 3D-ontwikelings platformen zoals Blender, Maya, Cinema4D, After Effects, SketchUp, … . Buiten modelerern kan je er ook mee renderen, animeren , visual effects mee maken, motion tracking, …
